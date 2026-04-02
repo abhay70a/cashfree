@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Processing Payment</title>
+</head>
+
+<body style="text-align:center;margin-top:100px;font-family:sans-serif;">
+
+<h2>Opening Payment Gateway...</h2>
+
+<script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
+
+<script>
+const cashfree = Cashfree({ mode: "production" });
+
+const params = new URLSearchParams(window.location.search);
+const amount = params.get("amount");
+
+async function startPayment() {
+    const res = await fetch("/create-order", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ amount: amount })
+    });
+
+    const data = await res.json();
+
+    cashfree.checkout({
+        paymentSessionId: data.payment_session_id,
+        redirectTarget: "_self"
+    });
+}
+
+startPayment();
+</script>
+
+</body>
+</html>

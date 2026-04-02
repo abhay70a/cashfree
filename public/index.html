@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fee Submission</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial;
+            background: #eef2f6;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(to right, #1b6ea8, #2ca3db);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+        }
+
+
+        .container {
+            display: flex;
+        }
+
+
+        .sidebar {
+            width: 240px;
+            background: #0b2c82;
+            min-height: 100vh;
+            padding-top: 10px;
+        }
+
+        .sidebar .menu {
+            padding: 12px;
+            margin: 8px;
+            background: #173b9c;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .sidebar .menu:hover {
+            background: #2f5be3;
+        }
+
+        /* MAIN */
+        .main {
+            flex: 1;
+            padding: 15px;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+        }
+
+        /* CARD */
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(32, 182, 212, 0.1);
+            padding: 12px;
+        }
+
+        /* NOTICE */
+        .notice {
+            color: red;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        /* SELECT */
+        select {
+            padding: 6px;
+            border-radius: 4px;
+        }
+
+        /* TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th {
+            background: #dce6ef;
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+
+        td {
+            padding: 7px;
+            border: 1px solid #ddd;
+        }
+
+        /* RIGHT PANEL */
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin: 4px 0;
+            font-size: 14px;
+        }
+
+        .balance {
+            color: red;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 10px 0;
+            justify-content: space-between;
+        }
+
+        /* INPUTS */
+        input,
+        select {
+            width: 100%;
+            padding: 6px;
+            margin: 5px 0;
+        }
+
+        /* BUTTON */
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #1f8f2e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #2dbf40;
+        }
+
+        /* CAPTCHA */
+        .captcha-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .captcha {
+            background: #444;
+            color: white;
+            padding: 6px 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div><b>Graphic Era Hill University</b> | Fee Submission</div>
+        <div>ABHAY SINGH SAUN</div>
+    </div>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="menu">Fee Submission</div>
+            <div class="menu">Fee Receipt</div>
+            <div class="menu">Transaction History</div>
+            <div class="menu">Challan</div>
+            <div class="menu">Fee Installment</div>
+            <div class="menu">Student Document Download</div>
+        </div>
+
+        <!-- MAIN -->
+        <div class="main">
+
+            <div class="notice">
+                * Kindly download receipt after 12 hours from fee receipt tab<br>
+                * For any discrepancy raise query or call support
+            </div>
+
+            <div class="grid">
+
+                <!-- LEFT PANEL -->
+                <div class="card">
+
+                    <label>Fee Type</label>
+                    <select>
+                        <option>Course Fee</option>
+                    </select>
+
+                    <h3>Academic Fee Detail (Amount in ₹)</h3>
+
+                    <table>
+                        <tr>
+                            <th style="color: #1b6ea8;">Sem/Year</th>
+                            <th style="color: #1b6ea8;">Fee Head</th>
+                            <th style="color: #1b6ea8;">Current Dues</th>
+                            <th style="color: #1b6ea8;">Discount</th>
+                            <th style="color: #1b6ea8;">Paid</th>
+                            <th style="color: #1b6ea8;">Balance</th>
+                        </tr>
+
+                        <tr>
+                            <td>4th yr</td>
+                            <td>Examination Fee</td>
+                            <td>4500</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>4500</td>
+                        </tr>
+                        <tr>
+                            <td>4th yr</td>
+                            <td>Library Fee</td>
+                            <td>3500</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>3500</td>
+                        </tr>
+                        <tr>
+                            <td>4th yr</td>
+                            <td>Insurance</td>
+                            <td>1000</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>4th yr</td>
+                            <td>Student Welfare</td>
+                            <td>750</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>750</td>
+                        </tr>
+                        <tr>
+                            <td>4th yr</td>
+                            <td>Sport Fee</td>
+                            <td>500</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>4th yr</td>
+                            <td>Online</td>
+                            <td>500</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>4th yr</td>
+                            <td>Transport Fee</td>
+                            <td>1650</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1650</td>
+                        </tr>
+                        <tr>
+                            <td>4th yr</td>
+                            <td>Tuition Fee</td>
+                            <td>214161</td>
+                            <td>103371</td>
+                            <td>0</td>
+                            <td>110790</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+                <!-- RIGHT PANEL -->
+                <div class="card">
+
+                    <div class="section-title" style="color: #1b6ea8;">Student Details</div>
+                    <div class="row" style="color: #1b6ea8;"><span>Name</span><span style="color: black;">Abhay Singh
+                            Saun</span></div>
+                    <div class="row" style="color: #1b6ea8;"><span>Program</span><span style="color: black;">B.Tech /
+                            CSE</span></div>
+                    <div class="row" style="color: #1b6ea8;"><span>Year</span><span style="color: black;">3</span></div>
+
+                    <hr>
+
+                    <div class="section-title" style="color: #1b6ea8;">Fee Details</div>
+                    <div class="row" style="color: #1b6ea8;"><span>Total Due</span><span
+                            style="color: black;">226561</span></div>
+                    <div class="row" style="color: #1b6ea8;"><span>Scholarship</span><span
+                            style="color: black;">103371</span></div>
+                    <div class="row" style="color: #1b6ea8;"><span>Fee Frequency</span><span style="color: black;">Half
+                            Yearly basis</span></div>
+                    <div class="row" style="color: #1b6ea8;"><span>Fee Installment</span><span><a href="">view
+                                detail</a></span></div>
+
+                    <hr>
+
+                    <div class="row" style="color: red;"><span>Balance Amount ()(₹):</span><span>12870</span></div>
+
+                    <hr>
+
+                    <label>Amount To Pay</label>
+                    <input type="number" value="0">
+
+                    <label>Payment Mode</label>
+                    <select>
+                        <option>Online</option>
+                    </select>
+
+                    <label>Gateway</label>
+                    <select>
+                        <option>Select</option>
+                        <option>Razorpay</option>
+                    </select>
+
+                    <label>Captcha</label>
+                    <div class="captcha-box">
+                        <div class="captcha" id="captcha">074031</div>
+                        <button onclick="refreshCaptcha()">↻</button>
+                    </div>
+
+                    <input placeholder="Enter Captcha">
+
+                    <button class="btn" onclick="goToPayment()">Proceed</button>
+
+                    <div class="notice">
+                        * Do not refresh or press back<br>
+                        * No extra charges
+                    </div>
+
+                    <div style="text-align: center; margin-top: 15px; font-size: 12px; color: #777;">
+                        <a href="privacy.html" style="color: #1b6ea8; text-decoration: none;">Privacy Policy</a> |
+                        &copy; 2026 GEHU Fee Submission
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function refreshCaptcha() {
+            document.getElementById("captcha").innerText =
+                Math.floor(100000 + Math.random() * 900000);
+        }
+
+        function goToPayment() {
+            let amount = document.querySelector('input[type="number"]').value;
+
+            if (amount <= 0) {
+                alert("Enter valid amount");
+                return;
+            }
+
+            window.location.href = "payment.html?amount=" + amount;
+        }
+    </script>
+
+</body>
+
+</html>
